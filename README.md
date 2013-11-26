@@ -17,10 +17,15 @@ Includes two versions:
 
 
 ## Usage
+### From the Command Line
+primeMProc:
+
 ``` make primeMProc```
+
+primePThread:
+
 ``` make primePThread```
 
-### From the Command Line
 Both versions of the application allow 3 command line options:
 ```
 –q be quiet (default is to output list of prime numbers) 
@@ -30,8 +35,18 @@ Both versions of the application allow 3 command line options:
 
 ### Example usage: 
 ```
-primePThread –q –m 500000000 –c 5
+make primePThread
+./primePThread –q –m 500000000 –c 5
 ```
+
+## Validation script
+
+```primeTest.bash``` is a Bash shell script that tests and validates the code:
+
+* Builds both versions of the application, primePThread and primeMProc.
+* Validates the output against a file (```primes-500k.txt```) containing first 500,000 prime numbers. 
+* Runs both applications, varying the number of threads/sub-processes from 1 to 10, and collects timing numbers.
+* Outputs timing numbers to file.
 
 
 ## Testing 
