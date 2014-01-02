@@ -1,5 +1,7 @@
 # Prime Number Finder
 
+C program that finds all prime numbers between 1 and a number (specified as a command-line argument) in the range [1..2^32]. It keeps track of them using a bitmap, and writes all found prime numbers to standard output in ascending order.
+
 Includes two versions:
 * ``` primePThread```: a threaded version with implicit memory sharing
 * ``` primeMProc```: a version using multiple processes and shared memory
